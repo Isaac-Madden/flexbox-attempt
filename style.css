@@ -1,0 +1,198 @@
+/* ----- Styling for Header -----  */
+
+.header-area{
+  background-color: #383733;
+  display: block;
+  text-align: center;
+  padding: 2em;
+  color: whitesmoke;
+}
+
+/* ----- Styling for Main Section -----  */
+
+body {
+	background: hsl(0, 0%, 90%);
+}
+
+#centered{
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+@media screen and (min-width: 40em) {
+
+.outer-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-area {
+  display: flex;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.sidebar {
+  background-color: #65635c;
+  flex: 0 0 12em;
+	margin-bottom: 1em;	
+  order: 1; /* ----- used as part of JS event listener to toggle sidebar -----  */
+}
+}
+
+/* ----- Styling for Menu -----  */
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* Problem with the UL here - overflow of content highlighted by GreenYellow. Caused, I think, due to bullet points of list */
+
+ul {
+  list-style: none;
+  background: #65635c;
+  /* margin-left: -2.5em; */
+  padding-right: 2.5em;
+}
+
+ul li {
+  background: #65635c;
+  padding: 1em 0em 1em 0em; /* top right bottom left */
+  text-align: center;
+}
+
+li:hover {
+  background-color: #383733;
+}
+
+/* ----- flexbox responsive layout media queries for menu ----- */
+
+@media  screen and (min-width: 40em) {
+
+  .single-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .single-nav li {
+    flex: 1 0 auto; /* ----- grow, shrink -----  */
+    text-align: center;
+  }
+}
+
+/* ----- Styling for Cards -----  */
+
+.cards {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.card {
+	margin-bottom: 1em;	
+  background-color: whitesmoke;
+  padding: 1em 0em 1em 0em; /* top right bottom left */
+}
+
+.card-content {
+  padding: 1em 0em 0em 0em; /* top right bottom left */
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.card { transition: all .3s ease-in-out; }
+.card:hover { transform: scale(1.1); }
+
+img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: normal;
+}
+
+.card-content p {
+	font-size: 95%;
+}
+
+/* ----- flexbox responsive layout media queries for cards ----- */
+
+@media  screen and (min-width: 40em) {
+
+    .cards {
+      display: flex; 
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 0 1 calc(50% - 0.5em);  /* grow srink width */
+    }
+}
+
+@media screen and (min-width: 60em){
+
+  .card {
+    flex: 0 1 calc(33% - 0.5em);  /* grow srink width */
+  }
+
+}
+
+/* ----- Styling for Side-bar -----  */
+
+.button:hover {
+  background-color: #383733;
+  color: whitesmoke;
+}
+
+.squish-container {
+  background-color: #65635c;
+  padding: 1em 0em 0em 0em; /* top right bottom left */
+  text-align: center;
+  color: whitesmoke;
+}
+
+#sidebar-left-toggle{
+  background-color: whitesmoke;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.1em;
+}
+
+#sidebar-right-toggle{
+  background-color: whitesmoke;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.1em;
+}
+
+/* ----- responsive layout media queries for side-bar ----- */
+
+/* @media screen and (max-width: 30em) {
+  .sidebar {
+  display: none;
+  }
+} */
+
+/* ----- Styling for footer -----  */
+
+.footer-area {
+  background-color: #383733;
+  display: block;
+  text-align: center;
+  padding: 2em;
+  color: whitesmoke;
+}
